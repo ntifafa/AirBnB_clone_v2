@@ -5,10 +5,9 @@ using the function deploy
 from fabric.api import *
 from os.path import exists
 
-env.hosts = ['<IP web-01>', '<IP web-02>']
-env.user = '<username>'
-env.key_filename = '<path to SSH key>'
-
+env.hosts = ['34.202.164.51', '100.25.38.107']
+env.user = 'ubuntu'
+env.key_filename = '~/.ssh/id_rsa'
 
 def do_pack():
     """Create a tar archive of the web_static directory"""
