@@ -3,7 +3,8 @@
 using the function deploy
 """
 from fabric.api import *
-from os.path import exists
+import os
+from datetime import datetime
 
 env.hosts = ['34.202.164.51', '100.25.38.107']
 env.user = 'ubuntu'
