@@ -14,14 +14,15 @@ def do_pack():
 
         # Create the file name
         now = datetime.now()
-        file_name = f"web_static_{now.year}{now.month}{now.day}{now.hour}{
-            now.minute}{now.second}.tgz"
+        file_name = "web_static_{}{}{}{}{}{}.tgz".format(
+            now.year, now.month, now.day, now.hour, now.minute, now.second)
 
         # Create the archive
-        local("tar -cvzf versions/{file_name} web_static")
+        local("tar -cvzf versions/{} web_static".format(
+            file_name))
 
         # Return the path to the archive
-        return f"versions/{file_name}"
+        return "versions/{}".format(file_name)
 
     except Exception as e:
         return None
